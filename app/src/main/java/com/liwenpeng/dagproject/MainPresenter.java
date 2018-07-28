@@ -1,6 +1,7 @@
 package com.liwenpeng.dagproject;
 
 import android.content.Context;
+import android.util.Log;
 import android.widget.Toast;
 
 import javax.inject.Inject;
@@ -13,17 +14,16 @@ import javax.inject.Inject;
  */
 public class MainPresenter {
 
-     MainView mainView;
-     Context mContext;
+    @Inject
+    MainRepotority mainRepotority;
 
     @Inject
-    public MainPresenter(MainView mainView, Context context) {
-        this.mainView = mainView;
-        this.mContext = context;
+    public MainPresenter() {
+
     }
 
     public void getData(){
-        Toast.makeText(mContext,"我在执行中",Toast.LENGTH_SHORT).show();
-
+        Log.d("lwp","调用成功");
+       // mainRepotority.fuckSs();
     }
 }
